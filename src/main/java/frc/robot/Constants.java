@@ -3,7 +3,7 @@ package frc.robot;
 import edu.wpi.first.math.geometry.Rotation2d;
 
 public class Constants {
-        public static final int GyroID = 0;
+        public static final int GyroID = 1;
         public static final int FrontLeftdriveMotorID = 11;
         public static final int FrontLeftazimuthMotorID = 21;
         public static final int FrontLeftcanCoderID = 31;
@@ -23,5 +23,7 @@ public class Constants {
         public static final int BackRightazimuthMotorID = 24;
         public static final int BackRightcanCoderID = 34;
         public static final Rotation2d BackRightangleOffset = Rotation2d.fromDegrees(358.154297);
+
+        public static final double deadzone = 0.05;
       
 }
