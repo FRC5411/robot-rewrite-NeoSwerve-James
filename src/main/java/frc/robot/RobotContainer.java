@@ -11,16 +11,20 @@ import frc.Systems.SwerveDrive;
 import frc.robot.Commands.SwerveCommand;
 
 public class RobotContainer {
-  private SwerveDrive Swerve;
+  private SwerveDrive robotSwerve;
   private CommandXboxController controller;
+
   public RobotContainer() {
-    Swerve = new SwerveDrive();
+    robotSwerve = new SwerveDrive();
     controller = new CommandXboxController(0);
-    Swerve.setDefaultCommand(new SwerveCommand(
-      Swerve,
-      ()->controller.getLeftX(), 
-      ()->controller.getLeftY(), 
-      ()->controller.getRightX()));
+    
+    robotSwerve.setDefaultCommand(new SwerveCommand(
+      robotSwerve,
+      () -> controller.getLeftX(), 
+      () -> controller.getLeftY(), 
+      () -> controller.getRightX()
+    ));
+
     configureBindings();
   }
 
